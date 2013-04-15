@@ -1,0 +1,15 @@
+@mixin spanner ($number_of_columns, $container_width, $gutter, $span)
+	{
+	$gutter_calc: percentage($gutter / $container_width);
+	$box_calc: percentage(($container_width / $number_of_columns) / $container_width);
+	
+
+	
+	$gutter_subtract: $gutter_calc / $number_of_columns;
+	
+	width: (($box_calc + $gutter_subtract) - $gutter_calc) * $span;
+	margin:$gutter_calc $gutter_calc 0 0;
+	
+	box-sizing:border-box;
+	float:left;
+	}	
