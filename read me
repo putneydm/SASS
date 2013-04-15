@@ -1,0 +1,15 @@
+SASS mixin that will calculate the size of a page element relative the max-width or width of its parent.
+
+Pass these arguments:
+- number of columns you want in the container
+- the width or max-width of the parent container in pixels
+- the width of the gutter in pixels
+- the number of columns you want the item to span
+
+It will calculate the width in percentage.
+
+	example
+
+	@include spanner (7, 1800px, 0px, 2);
+
+	yields a width of 28.5714286%
